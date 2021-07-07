@@ -39,9 +39,69 @@ function loadAlphabet() {
         allAlfbaArray.push(value.final);
     };
 }
-
+function loadAlphaFlash() {
+    pageHeader.textContent = "";
+    pageHeader.textContent = "Flashcards";
+    quizStudyBox.classList.add('hidden');
+    removeAllChildren(flashBox);
+    for (var [letter, value] of Object.entries(alphabet)) {
+        let nuDiv = document.createElement('div');
+        let nuDivTit = document.createElement('h1');
+        let nuTxt = document.createElement('p');
+        let nuDiv2 = document.createElement('div');
+        let nuTxtI = document.createElement('p');
+        let nuTxtM = document.createElement('p');
+        let nuTxtE = document.createElement('p');
+        nuDivTit.textContent = value.letter;
+        nuTxt.textContent = value.name;
+        nuTxtI.textContent = value.initial;
+        nuTxtM.textContent = value.middle;
+        nuTxtE.textContent = value.final;
+        nuDivTit.classList.add('cursive');
+        nuTxt.classList.add('small');
+        nuTxt.classList.add('semifaded');
+        nuDiv.classList.add('alphaFlashcards');
+        nuDiv2.classList.add('row')
+        nuDiv2.append(nuTxtE);
+        nuDiv2.append(nuTxtM);
+        nuDiv2.append(nuTxtI);
+        nuDiv.append(nuDivTit);
+        nuDiv.append(nuDiv2);
+        nuDiv.append(nuTxt);
+        flashBox.append(nuDiv);
+    };
+};
+function loadWordsFlash() {
+    pageHeader.textContent = "";
+    pageHeader.textContent = "Flashcards";
+    quizStudyBox.classList.add('hidden');
+    removeAllChildren(flashBox);
+    for (var [word, value] of Object.entries(words)) {
+        let nuDiv = document.createElement('div');
+        let nuDivTit = document.createElement('h1');
+        let nuTxt = document.createElement('p');
+        let nuTxtI = document.createElement('p');
+        nuDivTit.textContent = word;
+        nuTxt.textContent = value.english;
+        nuTxtI.textContent = value.meaning;
+        nuTxtI.classList.add('small');
+        nuTxt.classList.add('small');
+        nuTxt.classList.add('semifaded');
+        nuTxt.classList.add('nopacity');
+        nuDiv.classList.add('wordFlashcards');
+        nuDiv.addEventListener('click', toggleOpac);
+        nuDiv.append(nuDivTit);
+        nuDiv.append(nuTxt);
+        nuDiv.append(nuTxtI);
+        flashBox.append(nuDiv);
+        function toggleOpac() {
+            nuTxt.classList.toggle('nopacity');
+        }
+    };
+};
 function loadAlphaQuiz1() {
     loadAlphabet();
+    removeAllChildren(flashBox);
     removeAllChildren(answersBox);
     skipButt.classList.remove('hidden');
     swapButt.classList.remove('hidden');
@@ -89,6 +149,7 @@ function handleAnswerClick() {
 };
 function loadAlphaQuiz2() {
     loadAlphabet();
+    removeAllChildren(flashBox);
     removeAllChildren(answersBox);
     skipButt.classList.remove('hidden');
     swapButt.classList.remove('hidden');
@@ -156,6 +217,7 @@ function loadWords() {
 function loadWordsQuiz1() {
     loadWords();
     removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
     skipButt.classList.remove('hidden');
     swapButt.classList.remove('hidden');
     swapButt.removeEventListener('click', loadWordsQuiz1);
@@ -203,6 +265,7 @@ function handleAnswerClick2() {
 function loadWordsQuiz2() {
     loadWords();
     removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
     skipButt.classList.remove('hidden');
     swapButt.classList.remove('hidden');
     swapButt.removeEventListener('click', loadWordsQuiz2);

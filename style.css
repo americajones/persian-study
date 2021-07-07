@@ -18,6 +18,11 @@
     font-size: 17px;
     padding: 0;
 }
+h3{
+    text-align: center;
+    margin:0;
+    font-size: 22px;
+}
 h2{
     text-align: center;
     margin:0;
@@ -26,7 +31,7 @@ h2{
 h1{
     text-align: center;
     margin:0;
-    padding: 5px;
+    padding: 10px;
     font-size: 50px;
     font-weight: 400;
 }
@@ -42,19 +47,20 @@ nav {
     align-items: flex-end;
   }
   a {
-    color: #b9dfb4;
+    color: #dfb4b4;
     text-decoration: none;
   }
 .item {
   padding: 10px;
+  border-bottom: 1px dotted rgb(119, 84, 90);
 }
 .item.button {
   padding: 9px 5px;
 }
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: #b9dfb4;
-  background-color: #250d0d;
+  color: #dfb4b4;
+  background-color: #140606;
 }
 /* Mobile menu */
 .menu {
@@ -70,13 +76,19 @@ nav {
 }
 .menu li.subitem a {
   padding: 15px;
+  border-bottom: 1px dotted rgb(161, 110, 118);
 }
 .toggle {
   order: 1;
-  font-size: 20px;
+  font-size: 17px;
 }
 .item.button {
   order: 2;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .item {
   order: 3;
@@ -97,7 +109,7 @@ nav {
 }
 .topdrop {
     text-align: right;
-    color: #d5dfff;
+    color: #ffd5d5;
   }
 /* Submenu up from mobile screens */
 .submenu {
@@ -124,30 +136,28 @@ nav {
     display: flex;
     width: 100vw;
     height: 100vw;
-    border: solid 1px #4b7758;
+    border: solid 1px #774b4b;
     margin:auto;
     margin-top: 1em;
     flex-wrap: wrap;
     align-content: stretch;
     min-width: 300px;
     min-height: 300px;
-
 }
 .answer:hover{
     background-color: #140808;
 }
 .answer{    
-    background-color: #531f1f;
+    background-color: #471616;
     text-align: center;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border: solid 1px #4b776a;
+    border: solid 1px #723e3e;
     border-top: none;
-    border-bottom: none;
     font-size: 1em;
-    width:33%;
-    height:33%;
+    width:33.333333333333%;
+    height:33.333333333333%;
     overflow: hidden;
     border-inline-start: none;
     cursor: pointer;
@@ -162,6 +172,40 @@ background-color: #250d0d;
     max-height: 800px;
     margin: auto;
     margin-top: 0;
+}
+.wordFlashcards{
+  display: flex;
+  flex-direction: column;
+  padding: .4em;
+  margin: .22em;
+  padding-top: 1em;
+  width: 150px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #421616;
+  line-height: 1.4em;
+}
+.wordFlashcards:nth-child(even){
+  background-color: #250d0d;
+}
+.alphaFlashcards{
+    display: flex;
+    flex-direction: column;
+    padding: .4em;
+    margin: .22em;
+    padding-top: 1em;
+    width: 135px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #250d0d;
+    line-height: 1.4em;
+  }
+  .flashBox {
+    margin-top: .5em;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 .butt {
     background-color: #341111;
@@ -194,8 +238,21 @@ background-color: #250d0d;
   position: relative;
   right: 0;
 }
+
+.faded {
+    opacity: 15%;
+  }
+.semifaded {
+    opacity: 55%;
+}
 .large{
     font-size: 42px;
+}
+.nopacity {
+  opacity: 0;
+}
+.small {
+    font-size: 16px;
 }
 /* desktop styling */
  
@@ -208,7 +265,7 @@ background-color: #250d0d;
         padding:2rem;
     }
     .menu {
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: nowrap;
       background: none;
     }
@@ -242,7 +299,7 @@ background-color: #250d0d;
     width: 600px;
     height: 600px;
     border: none;
-    border-left: 1px solid #58537b;
+    border-left: 1px solid #7b5353;
 }
 
 #quiz-practice {
