@@ -156,6 +156,13 @@ nav {
 .butt:hover {
 background-color: #250d0d;
 }
+.answers img {
+    width: 100%;
+    max-width: 800px;
+    max-height: 800px;
+    margin: auto;
+    margin-top: 0;
+}
 .butt {
     background-color: #341111;
     color: #d5ffea;
@@ -188,7 +195,7 @@ background-color: #250d0d;
   right: 0;
 }
 .large{
-    font-size: 45px;
+    font-size: 42px;
 }
 /* desktop styling */
  
@@ -237,14 +244,15 @@ background-color: #250d0d;
     border: none;
     border-left: 1px solid #58537b;
 }
-.large{
-    font-size: 55px;
-}
+
 #quiz-practice {
     height: auto;
 }
 .answer{
   font-size: 1.3em;
+}
+.large{
+    font-size: 50px;
 }
 .skip,
 .swap {

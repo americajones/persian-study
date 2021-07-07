@@ -11,11 +11,17 @@ const secretMessage = document.querySelector('.secret-message');
 let numbersArray = [];
 let alphaArray = [];
 let alfbaArray = [];
+let wordsArray = [];
+let meaningsArray = [];
+let englishArray = [];
 let allAlfbaArray = [];
 let randoNumber = 69;
 let trueAnswer = "";
 let selectedAnswer = "";
 
+pageHeader.addEventListener('click', function () {
+    location.reload()
+});
 function loadAlphabet() {
     alfbaArray = [];
     alphaArray = [];
@@ -120,6 +126,119 @@ function handleAnswerClick1() {
         console.log('. * nice! * .');
         setTimeout(() => {
             loadAlphaQuiz2();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
+function loadWords() {
+    alfbaArray = [];
+    alphaArray = [];
+    meaningsArray = [];
+    wordsArray = [];
+    englishArray = [];
+    allAlfbaArray = [];
+    answersBox.classList.remove('hidden');
+    pageHeader.textContent = "";
+    pageHeader.textContent = "فارسی";
+    quizStudyBox.classList.remove('hidden');
+    for (var [word, value] of Object.entries(words)) {
+        wordsArray.push(word);
+        englishArray.push(value.english);
+        meaningsArray.push(value.meaning);
+    };
+}
+
+function loadWordsQuiz1() {
+    loadWords();
+    removeAllChildren(answersBox);
+    skipButt.classList.remove('hidden');
+    swapButt.classList.remove('hidden');
+    swapButt.removeEventListener('click', loadWordsQuiz1);
+    swapButt.addEventListener('click', loadWordsQuiz2);
+    skipButt.removeEventListener('click', loadWordsQuiz2);
+    skipButt.addEventListener('click', loadWordsQuiz1);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    mainCharText.textContent = wordsArray[randoNumber];
+    mainCharText.classList.add('cursive')
+    secondaryCharText.textContent = "";
+    let answersArray = [];
+    trueAnswer = englishArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = englishArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick2)
+        newDiv.classList.add('answer');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick2() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        mainCharText.append(" = ", selectedAnswer);
+        console.log('. * nice! * .');
+        setTimeout(() => {
+            loadWordsQuiz1();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
+function loadWordsQuiz2() {
+    loadWords();
+    removeAllChildren(answersBox);
+    skipButt.classList.remove('hidden');
+    swapButt.classList.remove('hidden');
+    swapButt.removeEventListener('click', loadWordsQuiz2);
+    swapButt.addEventListener('click', loadWordsQuiz1);
+    skipButt.removeEventListener('click', loadWordsQuiz1);
+    skipButt.addEventListener('click', loadWordsQuiz2);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    mainCharText.textContent = englishArray[randoNumber];
+    mainCharText.classList.add('cursive')
+    secondaryCharText.textContent = "";
+    let answersArray = [];
+    trueAnswer = wordsArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = wordsArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick3)
+        newDiv.classList.add('answer');
+        newDiv.classList.add('large');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick3() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        mainCharText.append(" = ", selectedAnswer);
+        console.log('. * nice! * .');
+        setTimeout(() => {
+            loadWordsQuiz2();
             secretMessage.textContent = '';
         }, 1000);
     } else {

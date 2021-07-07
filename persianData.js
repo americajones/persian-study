@@ -320,3 +320,101 @@ const alphabet = {
         "soundclip": "./assets/sounds/ye.mp3"
     }
 }
+
+const words = {
+    "سلام": {
+        "english": "salaam",
+        "meaning": "hello",
+        "type": "greeting"
+    },
+    "هفته": {
+        "english": "hafte",
+        "meaning": "week",
+        "type": "noun"
+    },
+    "سال": {
+        "english": "saal",
+        "meaning": "year",
+        "type": "noun"
+    },
+    "امروز": {
+        "english": "emrooz",
+        "meaning": "today",
+        "type": "noun"
+    },
+    "فردا": {
+        "english": "fardaa",
+        "meaning": "tomorrow",
+        "type": "noun"
+    },
+    "دیروز": {
+        "english": "dirooz",
+        "meaning": "yesterday",
+        "type": "adv"
+    },
+    "ساعت": {
+        "english": "saa'at",
+        "meaning": "hour",
+        "type": ""
+    },
+    "دقیقه": {
+        "english": "daqiqe",
+        "meaning": "minute",
+        "type": ""
+    },
+    "توانستن": {
+        "english": "tavaanestan",
+        "meaning": "can",
+        "type": "verb"
+    },
+    "انجام دادن": {
+        "english": "anjaam daadan",
+        "meaning": "do",
+        "type": "verb"
+    },
+    "رفتن": {
+        "english": "raftan",
+        "meaning": "go",
+        "type": "verb"
+    },
+    "آمدن": {
+        "english": "aamadan",
+        "meaning": "come",
+        "type": "verb"
+    },
+    "خندیدن": {
+        "english": "khandidan",
+        "meaning": "laugh",
+        "type": "verb"
+    },
+    "زیبا": {
+        "english": "zibaa",
+        "meaning": "beautiful",
+        "type": "adj"
+    },
+    "خوب": {
+        "english": "khoob",
+        "meaning": "good",
+        "type": "adj"
+    },
+    "کوچک": {
+        "english": "koochak",
+        "meaning": "small",
+        "type": "adj"
+    },
+    "بله": {
+        "english": "bale",
+        "meaning": "yes",
+        "type": ""
+    },
+    "خیر": {
+        "english": "kheyr",
+        "meaning": "no",
+        "type": ""
+    },
+    // "": {
+    //     "english":"",
+    //     "meaning":"",
+    //     "type":""
+    // },
+}

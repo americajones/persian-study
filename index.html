@@ -14,7 +14,7 @@
     <nav>
         <ul class="menu header">
             <li class="title">Persian Study</li>
-            <li class="item has-submenu">
+            <!-- <li class="item has-submenu">
                 <a tabindex="0">Study</a>
                 <ul class="submenu">
                     <li class="subitem final"><a href="#" onclick="">Alphabet</a>
@@ -22,16 +22,17 @@
                     <li class="subitem final"><a href="#" onclick="">Words</a></li>
                     <li class="subitem final"><a href="#" onclick="">Grammar</a></li>
                 </ul>
-            </li>
-            <li class="item has-submenu">
+            </li> -->
+            <!-- <li class="item has-submenu">
                 <a tabindex="0">Quiz</a>
                 <ul class="submenu">
                     <li class="subitem final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a>
                     </li>
-                    <li class="subitem final"><a href="#" onclick="">Words</a></li>
+                    <li class="subitem final"><a href="#" onclick="loadWordsQuiz1()">Words</a></li>
                 </ul>
-            </li>
-            <!-- <li class="item final"><a href="#" onclick="">Alphabet</a></li> -->
+            </li> -->
+            <li class="item final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a></li>
+            <li class="item final"><a href="#" onclick="loadWordsQuiz1()">Reading Words</a></li>
             <li class="toggle">
                 <h2><a class="topdrop" href="#">Menu ▼</a></h2>
             </li>
@@ -44,6 +45,7 @@
                 <h2 id="optional-char" class="faded"></h2>
             </div>
             <div class="answers">
+                <img src="./farsipoem.png" alt="poetry">
             </div>
             <div class="bottom-buttons">
                 <button class="swap butt hidden">swap quiz style</button>
