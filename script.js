@@ -186,7 +186,7 @@ function loadAlphaQuiz2() {
         newDiv.textContent = answer;
         newDiv.addEventListener('click', handleAnswerClick1)
         newDiv.classList.add('answer');
-        newDiv.classList.add('large');
+        newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
 };
@@ -286,6 +286,7 @@ function loadAdvancedAlphaQuiz2() {
         newDiv.textContent = answer;
         newDiv.addEventListener('click', handleAnswerClick7)
         newDiv.classList.add('answer');
+        newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
 };
