@@ -412,9 +412,129 @@ const words = {
         "meaning": "no",
         "type": ""
     },
+    "ساعتِ": {
+        "english": "saa'at-e",
+        "meaning": "o'clock",
+        "type": ""
+    },
+    "استفاده کردن": {
+        "english": "estefaade kardan",
+        "meaning": "use",
+        "type": ""
+    },
+    "درست کردن": {
+        "english": "dorost kardan",
+        "meaning": "make",
+        "type": ""
+    },
+    "دشوار": {
+        "english": "doshvaar",
+        "meaning": "difficult",
+        "type": ""
+    },
+    "زشت": {
+        "english": "zesht",
+        "meaning": "ugly",
+        "type": ""
+    },
+    "ساده": {
+        "english": "saade",
+        "meaning": "easy",
+        "type": ""
+    },
+    "بد": {
+        "english": "bad",
+        "meaning": "bad",
+        "type": ""
+    },
+    "نزدیک": {
+        "english": "nazdik",
+        "meaning": "near",
+        "type": ""
+    },
+    "خداحافظ": {
+        "english": "khodaahaafez",
+        "meaning": "goodbye",
+        "type": ""
+    },
+    "دوشنبه": {
+        "english": "doshanbe",
+        "meaning": "Monday",
+        "type": ""
+    },
+    "سه شنبه": {
+        "english": "se shanbe",
+        "meaning": "Tuesday",
+        "type": ""
+    },
+    "چهارشنبه": {
+        "english": "chaahaar-shanbe",
+        "meaning": "Wednesday",
+        "type": ""
+    },
+    "پنج شنبه": {
+        "english": "panj shanbe",
+        "meaning": "Thursday",
+        "type": ""
+    },
+    "جمعه": {
+        "english": "jome",
+        "meaning": "Friday",
+        "type": ""
+    },
+    "شنبه": {
+        "english": "shanbe",
+        "meaning": "Saturday",
+        "type": ""
+    },
+    "یک شنبه": {
+        "english": "yek shanbe",
+        "meaning": "Sunday",
+        "type": ""
+    },
+
     // "": {
     //     "english":"",
     //     "meaning":"",
     //     "type":""
+    // },
+}
+
+const sentances = {
+    "از دیدنت خوشحال شدم": {
+        "english": "az didanat khoshhaal shodam",
+        "meaning": "nice to meet you"
+    },
+    "صبح به خیر": {
+        "english": "sobh be kheyr",
+        "meaning": "good morning"
+    },
+    "بعدازظهر بخیر": {
+        "english": "ba'd az zohr be kheyr",
+        "meaning": "good afternoon"
+    },
+    "عصر به خیر": {
+        "english": "asr be kheyr",
+        "meaning": "good evening"
+    },
+    "شب به خیر": {
+        "english": "shab be kheyr",
+        "meaning": "good night"
+    },
+    "حال شما چطور است؟": {
+        "english": "haal-e shomaa chetor ast?",
+        "meaning": "how are you?"
+    },
+    "متشکرم": {
+        "english": "motshakeram",
+        "meaning": "thank you"
+    },
+    "خوشمزه است": {
+        "english": "khoshmaze ast!",
+        "meaning": "Delicious!"
+    },
+    // "": {
+    //     "english": "",
+    //     "meaning": ""
     // },
 }

@@ -173,6 +173,14 @@ background-color: #250d0d;
     margin: auto;
     margin-top: 0;
 }
+.secret-message{
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: 2em;
+  color: #cfb4df;
+}
 .wordFlashcards{
   display: flex;
   flex-direction: column;
@@ -248,6 +256,9 @@ background-color: #250d0d;
 .large{
     font-size: 42px;
 }
+.med{
+    font-size: 32px;
+}
 .nopacity {
   opacity: 0;
 }
@@ -314,5 +325,8 @@ background-color: #250d0d;
 .skip,
 .swap {
   position:relative;
+}
+.med{
+  font-size: 35px;
 }
 }

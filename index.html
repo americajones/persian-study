@@ -29,14 +29,22 @@
                 <ul class="submenu">
                     <li class="subitem final"><a href="#" onclick="loadAlphaQuiz1()">Basic Alphabet Quiz</a>
                     </li>
+                    <li class="subitem final"><a href="#" onclick="loadAdvancedAlphaQuiz1()">Advanced Alphabet Quiz</a>
                     <li class="subitem final"><a href="#" onclick="loadWordsQuiz1()">Words Reading Quiz</a></li>
                 </ul>
             </li>
-            <!-- <li class="item final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a></li>
-            <li class="item final"><a href="#" onclick="loadWordsQuiz1()">Reading Words</a></li> -->
-            <li class="toggle">
-                <h3><a class="topdrop" href="#">Menu ▼</a></h3>
+            <li class="item has-submenu">
+                <a tabindex="0">Level 1</a>
+                <ul class="submenu">
             </li>
+            <li class="subitem final"><a href="#" onclick="loadWordsMeaningsQuiz()">Words Meanings Quiz</a></li>
+        </ul>
+        </li>
+        <!-- <li class="item final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a></li>
+            <li class="item final"><a href="#" onclick="loadWordsQuiz1()">Reading Words</a></li> -->
+        <li class="toggle">
+            <h3><a class="topdrop" href="#">Menu ▼</a></h3>
+        </li>
         </ul>
     </nav>
     <div id="main-box">
@@ -49,9 +57,9 @@
                 <img src="./farsipoem.png" alt="poetry">
             </div>
             <div class="bottom-buttons">
-                <button class="swap butt hidden">swap quiz style</button>
-                <div class='secret-message'></div>
-                <button class="skip butt hidden">skip</button>
+                <!-- <button class="swap butt hidden">swap quiz style</button> -->
+                <!-- <div class='secret-message'></div> -->
+                <!-- <button class="skip butt hidden">skip</button> -->
             </div>
         </div>
         <div class="flashBox"></div>
