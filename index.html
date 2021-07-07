@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persian Study Assist</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./persianData.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu header">
+            <li class="title">Persian Study</li>
+            <li class="item has-submenu">
+                <a tabindex="0">Study</a>
+                <ul class="submenu">
+                    <li class="subitem final"><a href="#" onclick="">Alphabet</a>
+                    </li>
+                    <li class="subitem final"><a href="#" onclick="">Words</a></li>
+                    <li class="subitem final"><a href="#" onclick="">Grammar</a></li>
+                </ul>
+            </li>
+            <li class="item has-submenu">
+                <a tabindex="0">Quiz</a>
+                <ul class="submenu">
+                    <li class="subitem final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a>
+                    </li>
+                    <li class="subitem final"><a href="#" onclick="">Words</a></li>
+                </ul>
+            </li>
+            <!-- <li class="item final"><a href="#" onclick="">Alphabet</a></li> -->
+            <li class="toggle">
+                <h2><a class="topdrop" href="#">Menu ▼</a></h2>
+            </li>
+        </ul>
+    </nav>
+    <div id="main-box">
+        <div id="quiz-practice">
+            <div>
+                <h1 id="main-char"></h1>
+                <h2 id="optional-char" class="faded"></h2>
+            </div>
+            <div class="answers">
+            </div>
+            <div class="bottom-buttons">
+                <button class="swap butt hidden">swap quiz style</button>
+                <div class='secret-message'></div>
+                <button class="skip butt hidden">skip</button>
+            </div>
+        </div>
+        <div class="flashBox"></div>
+        <script src="./script.js"></script>
+</body>
+
+</html>

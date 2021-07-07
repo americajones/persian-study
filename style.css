@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #b9dfb4;
+    flex-grow: 2;
+    padding-left: 1em;
+  }
+  body{
+    background-color: #140808;
+    color: #eeffeb;
+    margin:auto;
+    font-family: Arial, Helvetica, fantasy, sans-serif;
+    font-size: 17px;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+}
+h1{
+    text-align: center;
+    margin:0;
+    padding: 5px;
+    font-size: 50px;
+    font-weight: 400;
+}
+.menu,
+.submenu {
+  list-style-type: none;
+}
+nav {
+    background: #341111;
+    padding: 0 15px;
+    position: relative;
+    align-content: center;
+    align-items: flex-end;
+  }
+  a {
+    color: #b9dfb4;
+    text-decoration: none;
+  }
+.item {
+  padding: 10px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #b9dfb4;
+  background-color: #250d0d;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+  min-width: 80px
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: right;
+  display: none;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.active .item {
+  display: block;
+}
+.show {display:block;}
+.hidden {display:none;}
+.button.secondary {
+  /* divider between buttons and menu links */
+}
+.topdrop {
+    text-align: right;
+    color: #d5dfff;
+  }
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+  width: 100%;
+}
+.has-submenu {
+  cursor: pointer;
+}
+.has-submenu > a::after {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "▼";
+  padding-left: 5px;
+}
+.submenu-active {
+  z-index: 4;
+}
+.answers{
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    border: solid 1px #4b7758;
+    margin:auto;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    align-content: stretch;
+    min-width: 300px;
+    min-height: 300px;
+
+}
+.answer:hover{
+    background-color: #140808;
+}
+.answer{    
+    background-color: #531f1f;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border: solid 1px #4b776a;
+    border-top: none;
+    border-bottom: none;
+    font-size: 1em;
+    width:33%;
+    height:33%;
+    overflow: hidden;
+    border-inline-start: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.butt:hover {
+background-color: #250d0d;
+}
+.butt {
+    background-color: #341111;
+    color: #d5ffea;
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    /* width: 160px; */
+    text-align: center;
+    border-radius: 5px;
+}
+.bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.swap {
+  margin: auto;
+  width: 150px;
+  text-align: center;
+  margin-top: 2rem;
+
+}
+.skip {
+  margin: auto;
+  width: 150px;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  right: 0;
+}
+.large{
+    font-size: 45px;
+}
+/* desktop styling */
+ 
+@media all and (min-width: 960px) {
+    body {
+      max-width: 1200px;
+      padding: 1rem;
+    }
+    #quiz-practice {
+        padding:2rem;
+    }
+    .menu {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      background: none;
+    }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+    border: none;
+  }
+  .button {
+    order: 2;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #341111;
+  }
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+  .answers{
+    width: 600px;
+    height: 600px;
+    border: none;
+    border-left: 1px solid #58537b;
+}
+.large{
+    font-size: 55px;
+}
+#quiz-practice {
+    height: auto;
+}
+.answer{
+  font-size: 1.3em;
+}
+.skip,
+.swap {
+  position:relative;
+}
+}
