@@ -321,7 +321,7 @@ const alphabet = {
     }
 }
 
-const words = {
+const words1 = {
     "سلام": {
         "english": "salaam",
         "meaning": "hello",
@@ -500,7 +500,7 @@ const words = {
     // },
 }
 
-const sentances = {
+const sentences1 = {
     "از دیدنت خوشحال شدم": {
         "english": "az didanat khoshhaal shodam",
         "meaning": "nice to meet you"

@@ -58,7 +58,6 @@ function loadAlphaFlash() {
         nuTxtI.textContent = value.initial;
         nuTxtM.textContent = value.middle;
         nuTxtE.textContent = value.final;
-        nuDivTit.classList.add('cursive');
         nuTxt.classList.add('small');
         nuTxt.classList.add('semifaded');
         nuDiv.classList.add('alphaFlashcards');
@@ -77,7 +76,7 @@ function loadWordsFlash() {
     pageHeader.textContent = "Flashcards";
     quizStudyBox.classList.add('hidden');
     removeAllChildren(flashBox);
-    for (var [word, value] of Object.entries(words)) {
+    for (var [word, value] of Object.entries(words1)) {
         let nuDiv = document.createElement('div');
         let nuDivTit = document.createElement('h1');
         let nuTxt = document.createElement('p');
@@ -90,6 +89,34 @@ function loadWordsFlash() {
         nuTxt.classList.add('semifaded');
         nuTxt.classList.add('nopacity');
         nuDiv.classList.add('wordFlashcards');
+        nuDiv.addEventListener('click', toggleOpac);
+        nuDiv.append(nuDivTit);
+        nuDiv.append(nuTxt);
+        nuDiv.append(nuTxtI);
+        flashBox.append(nuDiv);
+        function toggleOpac() {
+            nuTxt.classList.toggle('nopacity');
+        }
+    };
+};
+function loadSentencesFlash() {
+    pageHeader.textContent = "";
+    pageHeader.textContent = "Flashcards";
+    quizStudyBox.classList.add('hidden');
+    removeAllChildren(flashBox);
+    for (var [word, value] of Object.entries(sentences1)) {
+        let nuDiv = document.createElement('div');
+        let nuDivTit = document.createElement('h2');
+        let nuTxt = document.createElement('p');
+        let nuTxtI = document.createElement('p');
+        nuDivTit.textContent = word;
+        nuTxt.textContent = value.english;
+        nuTxtI.textContent = value.meaning;
+        nuTxtI.classList.add('small');
+        nuTxt.classList.add('small');
+        nuTxt.classList.add('semifaded');
+        nuTxt.classList.add('nopacity');
+        nuDiv.classList.add('sentenceFlashcards');
         nuDiv.addEventListener('click', toggleOpac);
         nuDiv.append(nuDivTit);
         nuDiv.append(nuTxt);
@@ -127,7 +154,6 @@ function loadAlphaQuiz1() {
     makeButtons(loadAlphaQuiz2, loadAlphaQuiz1);
     randoNumber = Math.floor(Math.random() * alfbaArray.length);
     mainCharText.textContent = alfbaArray[randoNumber];
-    mainCharText.classList.add('cursive')
     secondaryCharText.textContent = "";
     let answersArray = [];
     trueAnswer = alphaArray[randoNumber];
@@ -151,7 +177,6 @@ function handleAnswerClick() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadAlphaQuiz1();
             secretMessage.textContent = '';
@@ -170,7 +195,6 @@ function loadAlphaQuiz2() {
     makeButtons(loadAlphaQuiz1, loadAlphaQuiz2);
     randoNumber = Math.floor(Math.random() * alfbaArray.length);
     mainCharText.textContent = alphaArray[randoNumber];
-    mainCharText.classList.add('cursive')
     secondaryCharText.textContent = "";
     let answersArray = [];
     trueAnswer = alfbaArray[randoNumber];
@@ -195,7 +219,6 @@ function handleAnswerClick1() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadAlphaQuiz2();
             secretMessage.textContent = '';
@@ -214,7 +237,6 @@ function loadAdvancedAlphaQuiz1() {
     makeButtons(loadAdvancedAlphaQuiz2, loadAdvancedAlphaQuiz1);
     randoNumber = Math.floor(Math.random() * allAlfbaArray.length);
     mainCharText.textContent = allAlfbaArray[randoNumber];
-    mainCharText.classList.add('cursive')
     secondaryCharText.textContent = "";
     let answersArray = [];
     // console.log(Object.values(alphabet[1]).includes("mim"));
@@ -244,7 +266,6 @@ function handleAnswerClick6() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadAdvancedAlphaQuiz1();
             secretMessage.textContent = '';
@@ -295,7 +316,6 @@ function handleAnswerClick7() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadAdvancedAlphaQuiz2();
             secretMessage.textContent = '';
@@ -319,13 +339,71 @@ function loadWords() {
     pageHeader.textContent = "";
     pageHeader.textContent = "فارسی";
     quizStudyBox.classList.remove('hidden');
-    for (var [word, value] of Object.entries(words)) {
+    for (var [word, value] of Object.entries(words1)) {
         wordsArray.push(word);
         englishArray.push(value.english);
         meaningsArray.push(value.meaning);
     };
 }
+function loadSentences() {
+    alfbaArray = [];
+    alphaArray = [];
+    meaningsArray = [];
+    wordsArray = [];
+    englishArray = [];
+    allAlfbaArray = [];
+    answersBox.classList.remove('hidden');
+    pageHeader.textContent = "";
+    pageHeader.textContent = "فارسی";
+    quizStudyBox.classList.remove('hidden');
+    for (var [sentence, value] of Object.entries(sentences1)) {
+        wordsArray.push(sentence);
+        englishArray.push(value.english);
+        meaningsArray.push(value.meaning);
+    };
+}
 
+function loadSentencesQuiz1() {
+    loadSentences();
+    removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
+    makeButtons(loadSentencesQuiz2, loadSentencesQuiz1);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    mainCharText.textContent = wordsArray[randoNumber];
+    secondaryCharText.textContent = meaningsArray[randoNumber];
+    let answersArray = [];
+    trueAnswer = englishArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = englishArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick8)
+        newDiv.classList.add('answer');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick8() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        mainCharText.append(" = ", selectedAnswer);
+        setTimeout(() => {
+            loadSentencesQuiz1();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
 function loadWordsQuiz1() {
     loadWords();
     removeAllChildren(answersBox);
@@ -333,8 +411,7 @@ function loadWordsQuiz1() {
     makeButtons(loadWordsQuiz2, loadWordsQuiz1);
     randoNumber = Math.floor(Math.random() * wordsArray.length);
     mainCharText.textContent = wordsArray[randoNumber];
-    mainCharText.classList.add('cursive')
-    secondaryCharText.textContent = "";
+    secondaryCharText.textContent = meaningsArray[randoNumber];
     let answersArray = [];
     trueAnswer = englishArray[randoNumber];
     answersArray.push(trueAnswer);
@@ -357,7 +434,6 @@ function handleAnswerClick2() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadWordsQuiz1();
             secretMessage.textContent = '';
@@ -370,6 +446,48 @@ function handleAnswerClick2() {
     }
 };
 
+function loadSentencesQuiz2() {
+    loadSentences();
+    removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
+    makeButtons(loadSentencesQuiz1, loadSentencesQuiz2);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    mainCharText.textContent = englishArray[randoNumber];
+    secondaryCharText.textContent = meaningsArray[randoNumber];
+    let answersArray = [];
+    trueAnswer = wordsArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = wordsArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick9)
+        newDiv.classList.add('answer');
+        newDiv.classList.add('med');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick9() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        mainCharText.append(" = ", selectedAnswer);
+        setTimeout(() => {
+            loadSentencesQuiz2();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
 function loadWordsQuiz2() {
     loadWords();
     removeAllChildren(answersBox);
@@ -377,8 +495,7 @@ function loadWordsQuiz2() {
     makeButtons(loadWordsQuiz1, loadWordsQuiz2);
     randoNumber = Math.floor(Math.random() * wordsArray.length);
     mainCharText.textContent = englishArray[randoNumber];
-    mainCharText.classList.add('cursive')
-    secondaryCharText.textContent = "";
+    secondaryCharText.textContent = meaningsArray[randoNumber];
     let answersArray = [];
     trueAnswer = wordsArray[randoNumber];
     answersArray.push(trueAnswer);
@@ -402,9 +519,49 @@ function handleAnswerClick3() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadWordsQuiz2();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
+function loadSentencesMeaningsQuiz() {
+    loadSentences();
+    removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
+    makeButtons(loadSentencesMeaningsQuiz2, loadSentencesMeaningsQuiz);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    mainCharText.textContent = wordsArray[randoNumber];
+    secondaryCharText.textContent = "";
+    let answersArray = [];
+    trueAnswer = meaningsArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = meaningsArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick10)
+        newDiv.classList.add('answer');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick10() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        mainCharText.append(" = ", selectedAnswer);
+        setTimeout(() => {
+            loadSentencesMeaningsQuiz();
             secretMessage.textContent = '';
         }, 1000);
     } else {
@@ -421,7 +578,6 @@ function loadWordsMeaningsQuiz() {
     makeButtons(loadWordsMeaningsQuiz2, loadWordsMeaningsQuiz);
     randoNumber = Math.floor(Math.random() * wordsArray.length);
     mainCharText.textContent = wordsArray[randoNumber];
-    mainCharText.classList.add('cursive')
     secondaryCharText.textContent = "";
     let answersArray = [];
     trueAnswer = meaningsArray[randoNumber];
@@ -445,9 +601,50 @@ function handleAnswerClick4() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadWordsMeaningsQuiz();
+            secretMessage.textContent = '';
+        }, 1000);
+    } else {
+        secretMessage.textContent = 'try again.';
+        setTimeout(() => {
+            secretMessage.textContent = '';
+        }, 1000);
+    }
+};
+function loadSentencesMeaningsQuiz2() {
+    loadSentences();
+    removeAllChildren(answersBox);
+    removeAllChildren(flashBox);
+    makeButtons(loadSentencesMeaningsQuiz, loadSentencesMeaningsQuiz2);
+    randoNumber = Math.floor(Math.random() * wordsArray.length);
+    secondaryCharText.textContent = meaningsArray[randoNumber];
+    mainCharText.textContent = "";
+    let answersArray = [];
+    trueAnswer = wordsArray[randoNumber];
+    answersArray.push(trueAnswer);
+    for (let i = 0; i < 8; i++) {
+        let nuRandoNum = Math.floor(Math.random() * wordsArray.length);
+        let randoAnswer = wordsArray[nuRandoNum];
+        answersArray.push(randoAnswer);
+    }
+    shuffleArray(answersArray);
+    answersArray.forEach(answer => {
+        let newDiv = document.createElement('div');
+        newDiv.textContent = answer;
+        newDiv.addEventListener('click', handleAnswerClick11)
+        newDiv.classList.add('answer');
+        newDiv.classList.add('med');
+        answersBox.append(newDiv);
+    });
+};
+function handleAnswerClick11() {
+    selectedAnswer = this.textContent;
+    if (selectedAnswer === trueAnswer) {
+        secretMessage.textContent = '. * nice! * .';
+        secondaryCharText.append(" = ", selectedAnswer);
+        setTimeout(() => {
+            loadSentencesMeaningsQuiz2();
             secretMessage.textContent = '';
         }, 1000);
     } else {
@@ -464,7 +661,6 @@ function loadWordsMeaningsQuiz2() {
     makeButtons(loadWordsMeaningsQuiz, loadWordsMeaningsQuiz2);
     randoNumber = Math.floor(Math.random() * wordsArray.length);
     mainCharText.textContent = meaningsArray[randoNumber];
-    mainCharText.classList.add('cursive')
     secondaryCharText.textContent = "";
     let answersArray = [];
     trueAnswer = wordsArray[randoNumber];
@@ -489,7 +685,6 @@ function handleAnswerClick5() {
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
-        console.log('. * nice! * .');
         setTimeout(() => {
             loadWordsMeaningsQuiz2();
             secretMessage.textContent = '';

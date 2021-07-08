@@ -76,7 +76,7 @@ nav {
 }
 .menu li.subitem a {
   padding: 15px;
-  border-bottom: 1px dotted rgb(161, 110, 118);
+  /* border-bottom: 1px dotted rgb(121, 74, 81); */
 }
 .toggle {
   order: 1;
@@ -181,36 +181,60 @@ background-color: #250d0d;
   margin-top: 2em;
   color: #cfb4df;
 }
+.sentenceFlashcards{
+  display: flex;
+  flex-direction: column;
+  padding: .4em;
+  margin-top: .5em;
+  padding-top: 1em;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  background-color: #571818;
+  border-radius: 2px;
+  line-height: 1.4em;
+}
+.sentenceFlashcards:nth-child(3n+3){
+  background-color: #250d0d;
+}
+.sentenceFlashcards:nth-child(3n+2){
+  background-color: #3a1313;
+}
 .wordFlashcards{
   display: flex;
   flex-direction: column;
   padding: .4em;
-  margin: .22em;
+  margin: .5em;
+  border-radius: 2px;
   padding-top: 1em;
-  width: 150px;
+  width: 170px;
   font-size: 24px;
   text-align: center;
   background-color: #421616;
   line-height: 1.4em;
 }
-.wordFlashcards:nth-child(even){
+.wordFlashcards:nth-child(3n+2){
   background-color: #250d0d;
 }
+.wordFlashcards:nth-child(3n+3){
+  background-color: #571818;
+}
 .alphaFlashcards{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
     padding: .4em;
     margin: .22em;
     padding-top: 1em;
     width: 135px;
     font-size: 24px;
     text-align: center;
-    background-color: #250d0d;
+    background-color: #2e1010;
     line-height: 1.4em;
   }
-  .flashBox {
+.flashBox {
     margin-top: .5em;
-    margin-right: 0%;
+    margin: auto;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -282,6 +306,11 @@ background-color: #250d0d;
     }
   .logo {
     order: 0;
+  }
+  .sentenceFlashcards{
+    max-width: 750px;
+    margin: auto;
+    margin-top: .5em;
   }
   .item {
     order: 1;
