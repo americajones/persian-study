@@ -42,7 +42,7 @@ function loadAlphabet() {
 }
 function loadAlphaFlash() {
     pageHeader.textContent = "";
-    pageHeader.textContent = "Flashcards";
+    pageHeader.textContent = "فلش کارت";
     quizStudyBox.classList.add('hidden');
     removeAllChildren(flashBox);
     for (var [letter, value] of Object.entries(alphabet)) {
@@ -73,7 +73,7 @@ function loadAlphaFlash() {
 };
 function loadWordsFlash() {
     pageHeader.textContent = "";
-    pageHeader.textContent = "Flashcards";
+    pageHeader.textContent = "فلش کارت";
     quizStudyBox.classList.add('hidden');
     removeAllChildren(flashBox);
     for (var [word, value] of Object.entries(words1)) {
@@ -101,7 +101,7 @@ function loadWordsFlash() {
 };
 function loadSentencesFlash() {
     pageHeader.textContent = "";
-    pageHeader.textContent = "Flashcards";
+    pageHeader.textContent = "فلش کارت";
     quizStudyBox.classList.add('hidden');
     removeAllChildren(flashBox);
     for (var [word, value] of Object.entries(sentences1)) {
@@ -337,7 +337,7 @@ function loadWords() {
     allAlfbaArray = [];
     answersBox.classList.remove('hidden');
     pageHeader.textContent = "";
-    pageHeader.textContent = "فارسی";
+    pageHeader.textContent = "کلمات فارسی";
     quizStudyBox.classList.remove('hidden');
     for (var [word, value] of Object.entries(words1)) {
         wordsArray.push(word);
@@ -354,7 +354,7 @@ function loadSentences() {
     allAlfbaArray = [];
     answersBox.classList.remove('hidden');
     pageHeader.textContent = "";
-    pageHeader.textContent = "فارسی";
+    pageHeader.textContent = "جملات فارسی";
     quizStudyBox.classList.remove('hidden');
     for (var [sentence, value] of Object.entries(sentences1)) {
         wordsArray.push(sentence);
