@@ -204,10 +204,10 @@ background-color: #250d0d;
   display: flex;
   flex-direction: column;
   padding: .4em;
-  margin: .5em;
+  margin: .24em;
   border-radius: 2px;
-  padding-top: 1em;
-  width: 170px;
+  padding-top: .5em;
+  width: 100%;
   font-size: 24px;
   text-align: center;
   background-color: #421616;
@@ -223,10 +223,10 @@ background-color: #250d0d;
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-    padding: .4em;
-    margin: .22em;
+    padding: .5em;
+    margin: .24em;
     padding-top: 1em;
-    width: 135px;
+    width: 155px;
     font-size: 24px;
     text-align: center;
     background-color: #2e1010;
@@ -306,6 +306,11 @@ background-color: #250d0d;
     }
   .logo {
     order: 0;
+  }
+  .wordFlashcards{
+    width: 550px;
+    margin: auto;
+    margin-top: .5em;
   }
   .sentenceFlashcards{
     max-width: 750px;

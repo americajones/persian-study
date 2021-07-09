@@ -327,6 +327,16 @@ const words1 = {
         "meaning": "hello",
         "type": "greeting"
     },
+    "لطفا": {
+        "english": "lotfan",
+        "meaning": "please",
+        "type": "greeting"
+    },
+    "متاسفم": {
+        "english": "moteassefam",
+        "meaning": "sorry",
+        "type": "greeting"
+    },
     "هفته": {
         "english": "hafte",
         "meaning": "week",
@@ -492,12 +502,122 @@ const words1 = {
         "meaning": "Sunday",
         "type": ""
     },
-
+    "صفر": {
+        "english": "sfr",
+        "meaning": "zero",
+        "type": "number"
+    },
+    "یک": {
+        "english": "yek",
+        "meaning": "one",
+        "type": "number"
+    },
+    "دو": {
+        "english": "do",
+        "meaning": "two",
+        "type": "number"
+    },
+    "سه": {
+        "english": "se",
+        "meaning": "three",
+        "type": "number"
+    },
+    "چهار": {
+        "english": "chaahaar",
+        "meaning": "four",
+        "type": "number"
+    },
+    "پنج": {
+        "english": "panj",
+        "meaning": "five",
+        "type": "number"
+    },
+    "شش": {
+        "english": "shesh",
+        "meaning": "six",
+        "type": "number"
+    },
+    "هفت": {
+        "english": "haft",
+        "meaning": "seven",
+        "type": "number"
+    },
+    "هشت": {
+        "english": "hasht",
+        "meaning": "eight",
+        "type": "number"
+    },
+    "نه": {
+        "english": "noh",
+        "meaning": "nine",
+        "type": "number"
+    },
+    "ده": {
+        "english": "dah",
+        "meaning": "ten",
+        "type": "number"
+    },
+    "قهوه": {
+        "english": "qahve",
+        "meaning": "coffee",
+        "type": ""
+    },
+    "آبجو": {
+        "english": "aabejo",
+        "meaning": "beer",
+        "type": ""
+    },
+    "چای": {
+        "english": "chaay",
+        "meaning": "tea",
+        "type": ""
+    },
+    "شراب": {
+        "english": "sharaab",
+        "meaning": "wine",
+        "type": ""
+    },
+    "آب": {
+        "english": "aab",
+        "meaning": "water",
+        "type": ""
+    },
+    "گوشت گاو": {
+        "english": "goosht-e gaav",
+        "meaning": "beef",
+        "type": ""
+    },
+    "گوشت خوک": {
+        "english": "goosht-e khook",
+        "meaning": "pork",
+        "type": ""
+    },
+    "مرغ": {
+        "english": "morq",
+        "meaning": "chicken",
+        "type": ""
+    },
+    "گوشت بره": {
+        "english": "goosht-e barre",
+        "meaning": "lamb",
+        "type": ""
+    },
+    "ماهی": {
+        "english": "maahi",
+        "meaning": "fish",
+        "type": ""
+    },
+    "رفیق": {
+        "english": "refigh",
+        "meaning": "friend",
+        "type": ""
+    },
     // "": {
     //     "english":"",
     //     "meaning":"",
     //     "type":""
     // },
+
 }
 
 const sentences1 = {
@@ -532,6 +652,38 @@ const sentences1 = {
     "خوشمزه است": {
         "english": "khoshmaze ast!",
         "meaning": "Delicious!"
+    },
+    "من نمی دانم": {
+        "english": "man nemidânam",
+        "meaning": "I don't know"
+    },
+    "شما ... رو به فارسي چي ميگين؟": {
+        "english": "shoma ... ro be Fārsi chi migin?",
+        "meaning": "How do you say... in Persian?"
+    },
+    "!ببخشيد": {
+        "english": "bebakhshid",
+        "meaning": "Excuse me!"
+    },
+    "دلم برات تنگ شده": {
+        "english": "delam barat tang shodeh",
+        "meaning": "I miss you"
+    },
+    "عاشقتم": {
+        "english": "asheghetam",
+        "meaning": "I love you"
+    },
+    "يک زبان کافي نيست": {
+        "english": "yek zabân kâfi nist",
+        "meaning": "one language is never enough"
+    },
+    "من خوبم.ممنون": {
+        "english": "man khoobam mamnoon",
+        "meaning": "I*'m fine, thanks"
+    },
+    "نظری ندارم": {
+        "english": "nazari nadaram",
+        "meaning": "I Have No Idea"
     },
     // "": {
     //     "english": "",
