@@ -167,18 +167,20 @@ function loadAlphaQuiz1() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadAlphaQuiz1, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
 };
-function handleAnswerClick() {
-    selectedAnswer = this.textContent;
+function handleAnswerClick(timeoutFunction, event) {
+    selectedAnswer = event.target.textContent;
     if (selectedAnswer === trueAnswer) {
         secretMessage.textContent = '. * nice! * .';
         mainCharText.append(" = ", selectedAnswer);
         setTimeout(() => {
-            loadAlphaQuiz1();
+            timeoutFunction();
             secretMessage.textContent = '';
         }, 1000);
     } else {
@@ -208,27 +210,13 @@ function loadAlphaQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick1)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadAlphaQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick1() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadAlphaQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadAdvancedAlphaQuiz1() {
     loadAlphabet();
@@ -255,27 +243,12 @@ function loadAdvancedAlphaQuiz1() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick6)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadAdvancedAlphaQuiz1, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
-};
-
-function handleAnswerClick6() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadAdvancedAlphaQuiz1();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadAdvancedAlphaQuiz2() {
     loadAlphabet();
@@ -305,29 +278,14 @@ function loadAdvancedAlphaQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick7)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadAdvancedAlphaQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
 };
-function handleAnswerClick7() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadAdvancedAlphaQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
-};
-
 function loadWords() {
     alfbaArray = [];
     alphaArray = [];
@@ -362,7 +320,6 @@ function loadSentences() {
         meaningsArray.push(value.meaning);
     };
 }
-
 function loadSentencesQuiz1() {
     loadSentences();
     removeAllChildren(answersBox);
@@ -383,26 +340,12 @@ function loadSentencesQuiz1() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick8)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadSentencesQuiz1, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick8() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadSentencesQuiz1();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadWordsQuiz1() {
     loadWords();
@@ -424,28 +367,13 @@ function loadWordsQuiz1() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick2)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadWordsQuiz1, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
 };
-function handleAnswerClick2() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadWordsQuiz1();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
-};
-
 function loadSentencesQuiz2() {
     loadSentences();
     removeAllChildren(answersBox);
@@ -466,27 +394,13 @@ function loadSentencesQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick9)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadSentencesQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick9() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadSentencesQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadWordsQuiz2() {
     loadWords();
@@ -509,27 +423,13 @@ function loadWordsQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick3)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadWordsQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick3() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadWordsQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadSentencesMeaningsQuiz() {
     loadSentences();
@@ -551,26 +451,12 @@ function loadSentencesMeaningsQuiz() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick10)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadSentencesMeaningsQuiz, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick10() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadSentencesMeaningsQuiz();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadWordsMeaningsQuiz() {
     loadWords();
@@ -592,26 +478,12 @@ function loadWordsMeaningsQuiz() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick4)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadWordsMeaningsQuiz, e)
+        })
         newDiv.classList.add('answer');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick4() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadWordsMeaningsQuiz();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadSentencesMeaningsQuiz2() {
     loadSentences();
@@ -633,27 +505,13 @@ function loadSentencesMeaningsQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick11)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadSentencesMeaningsQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
-};
-function handleAnswerClick11() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        secondaryCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadSentencesMeaningsQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
 };
 function loadWordsMeaningsQuiz2() {
     loadWords();
@@ -675,28 +533,15 @@ function loadWordsMeaningsQuiz2() {
     answersArray.forEach(answer => {
         let newDiv = document.createElement('div');
         newDiv.textContent = answer;
-        newDiv.addEventListener('click', handleAnswerClick5)
+        newDiv.addEventListener('click', (e) => {
+            handleAnswerClick(loadWordsMeaningsQuiz2, e)
+        })
         newDiv.classList.add('answer');
         newDiv.classList.add('med');
         answersBox.append(newDiv);
     });
 };
-function handleAnswerClick5() {
-    selectedAnswer = this.textContent;
-    if (selectedAnswer === trueAnswer) {
-        secretMessage.textContent = '. * nice! * .';
-        mainCharText.append(" = ", selectedAnswer);
-        setTimeout(() => {
-            loadWordsMeaningsQuiz2();
-            secretMessage.textContent = '';
-        }, 1000);
-    } else {
-        secretMessage.textContent = 'try again.';
-        setTimeout(() => {
-            secretMessage.textContent = '';
-        }, 1000);
-    }
-};
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
