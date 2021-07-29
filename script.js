@@ -496,6 +496,7 @@ function loadWordsQuiz2() {
     randoNumber = Math.floor(Math.random() * wordsArray.length);
     mainCharText.textContent = englishArray[randoNumber];
     secondaryCharText.textContent = meaningsArray[randoNumber];
+    // secondaryCharText.classList.add('english');
     let answersArray = [];
     trueAnswer = wordsArray[randoNumber];
     answersArray.push(trueAnswer);

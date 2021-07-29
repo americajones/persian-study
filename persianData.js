@@ -612,10 +612,341 @@ const words1 = {
         "meaning": "friend",
         "type": ""
     },
+    "ساحل": {
+        "english": "saahel",
+        "meaning": "beach",
+        "type": ""
+    },
+    "درياچه": {
+        "english": "daRyaachey",
+        "meaning": "lake",
+        "type": ""
+    },
+    "منزل / خونه": {
+        "english": "manzil / khooney",
+        "meaning": "house",
+        "type": ""
+    },
+    "که": {
+        "english": "ke",
+        "meaning": "that",
+        "type": ""
+    },
+    "با": {
+        "english": "ba",
+        "meaning": "with",
+        "type": ""
+    },
+    "این": {
+        "english": "in",
+        "meaning": "this",
+        "type": ""
+    },
+    "داغ": {
+        "english": "dag",
+        "meaning": "hot",
+        "type": ""
+    },
+    "کلمه": {
+        "english": "kalameh",
+        "meaning": "word",
+        "type": ""
+    },
+
+    "و": {
+        "english": "va",
+        "meaning": "and",
+        "type": ""
+    },
+    "ما": {
+        "english": "ma",
+        "meaning": "we",
+        "type": ""
+    },
+    "کجا": {
+        "english": "kujaa",
+        "meaning": "where",
+        "type": ""
+    },
+    "چه": {
+        "english": "cheh",
+        "meaning": "what",
+        "type": ""
+    },
+    "که": {
+        "english": "ke",
+        "meaning": "which",
+        "type": ""
+    },
+    "به همین دلیل": {
+        "english": "beh hamin daleel",
+        "meaning": "why(give a reason)",
+        "type": ""
+    },
+    "چگونه": {
+        "english": "cheguneh",
+        "meaning": "how",
+        "type": ""
+    },
+    "که": {
+        "english": "keh",
+        "meaning": "who",
+        "type": ""
+    },
+    "می دانم": {
+        "english": "midanam",
+        "meaning": "know",
+        "type": ""
+    },
+    "بیشترین": {
+        "english": "bistarin",
+        "meaning": "the most",
+        "type": ""
+    },
+    "مردم": {
+        "english": "mardom",
+        "meaning": "people",
+        "type": ""
+    },
+    "روز": {
+        "english": "rooz",
+        "meaning": "day",
+        "type": ""
+    },
+    "ساعت": {
+        "english": "sa'at",
+        "meaning": "now",
+        "type": ""
+    },
+    "یادگیری": {
+        "english": "yadgiri",
+        "meaning": "learn",
+        "type": ""
+    },
+    "هرگز": {
+        "english": "hargez",
+        "meaning": "never",
+        "type": ""
+    },
     // "": {
-    //     "english":"",
-    //     "meaning":"",
-    //     "type":""
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": "",
+    //     "type": ""
     // },
 
 }
@@ -679,12 +1010,24 @@ const sentences1 = {
     },
     "من خوبم.ممنون": {
         "english": "man khoobam mamnoon",
-        "meaning": "I*'m fine, thanks"
+        "meaning": "I'm fine, thanks"
     },
     "نظری ندارم": {
         "english": "nazari nadaram",
         "meaning": "I Have No Idea"
     },
+    "من.... هستم": {
+        "english": "man ... hastam",
+        "meaning": "I'm (name)"
+    },
+    // "": {
+    //     "english": "",
+    //     "meaning": ""
+    // },
+    // "": {
+    //     "english": "",
+    //     "meaning": ""
+    // },
     // "": {
     //     "english": "",
     //     "meaning": ""
