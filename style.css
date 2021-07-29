@@ -35,7 +35,7 @@ h1{
     text-align: center;
     margin:0;
     padding: 10px;
-    font-size: 50px;
+    font-size: 47px;
     font-weight: 400;
 }
 .menu,
@@ -165,6 +165,7 @@ nav {
     border-inline-start: none;
     cursor: pointer;
     padding: 10px;
+    line-height: 1;
 }
 .butt:hover {
 background-color: #250d0d;
