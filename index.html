@@ -14,7 +14,9 @@
 <body>
     <nav>
         <ul class="menu header">
-            <li class="title">فارسی می‌خوانیم</li>
+            <li class="toggle">
+                <p><a class="topdrop" href="#">Menu ▼</a></p>
+            </li>
             <li class="item has-submenu">
                 <a tabindex="0">Flashcards</a>
                 <ul class="submenu">
@@ -25,6 +27,7 @@
                     <!-- <li class="subitem final"><a href="#" onclick="">Grammar</a></li> -->
                 </ul>
             </li>
+
             <li class="item has-submenu">
                 <a tabindex="0">Level 0</a>
                 <ul class="submenu">
@@ -38,16 +41,15 @@
             <li class="item has-submenu">
                 <a tabindex="0">Level 1</a>
                 <ul class="submenu">
+                    <li class="subitem final"><a href="#" onclick="loadWordsMeaningsQuiz()">Words Meanings Quiz</a></li>
+                    <li class="subitem final"><a href="#" onclick="loadSentencesMeaningsQuiz()">Phrases Meanings
+                            Quiz</a></li>
+                </ul>
             </li>
-            <li class="subitem final"><a href="#" onclick="loadWordsMeaningsQuiz()">Words Meanings Quiz</a></li>
-            <li class="subitem final"><a href="#" onclick="loadSentencesMeaningsQuiz()">Phrases Meanings Quiz</a></li>
+            <li class="title">فارسی می‌خوانیم</li>
         </ul>
-        </li>
         <!-- <li class="item final"><a href="#" onclick="loadAlphaQuiz1()">Alphabet</a></li>
             <li class="item final"><a href="#" onclick="loadWordsQuiz1()">Reading Words</a></li> -->
-        <li class="toggle">
-            <p><a class="topdrop" href="#">Menu ▼</a></p>
-        </li>
         </ul>
     </nav>
     <div id="main-box">
