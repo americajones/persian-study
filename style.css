@@ -6,13 +6,13 @@
   .title {
     font-size: 30px;
     font-weight: 700;
-    color: #b9dfb4;
+    color: #ffffff;
     flex-grow: 2;
     padding-right: 1em;
   }
   body{
-    background-color: #140808;
-    color: #eeffeb;
+    background-color: #030001;
+    color: #f7f0f0;
     margin:auto;
     font-family: Arial, Helvetica, fantasy, sans-serif;
     font-size: 17px;
@@ -44,27 +44,26 @@ h1{
   list-style-type: none;
 }
 nav {
-    background: #341111;
+    background: #571832;
     padding: 0 15px;
     position: relative;
     align-content: center;
     align-items: flex-end;
   }
   a {
-    color: #dfb4b4;
+    color: #f0e7e7;
     text-decoration: none;
   }
 .item {
   padding: 10px;
-  border-bottom: 1px dotted rgb(119, 84, 90);
 }
 .item.button {
   padding: 9px 5px;
 }
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: #dfb4b4;
-  background-color: #140606;
+  color: #ffebdd;
+  background-color: #030001;
 }
 /* Mobile menu */
 .menu {
@@ -114,7 +113,6 @@ nav {
 }
 .topdrop {
     text-align: right;
-    color: #ffd5d5;
   }
 /* Submenu up from mobile screens */
 .submenu {
@@ -141,7 +139,7 @@ nav {
     display: flex;
     width: 100vw;
     height: 100vw;
-    border: solid 1px #723e3e;
+    border: solid 1px #832e59;
     margin:auto;
     margin-top: 1em;
     flex-wrap: wrap;
@@ -151,12 +149,12 @@ nav {
 }
 
 .answer{    
-    background-color: #471616;
+    background-color: #250d17;
     text-align: center;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border: solid 1px #723e3e;
+    border: solid 1px #832e59;
     font-size: 1em;
     width:33.333333333333%;
     height:33.333333333333%;
@@ -164,19 +162,19 @@ nav {
     border-inline-start: none;
     cursor: pointer;
     padding: 10px;
-    line-height: 1;
+    line-height: .99;
 }
 .answer:nth-child(2),
 .answer:nth-child(4),
 .answer:nth-child(6),
 .answer:nth-child(8){
-  background-color: #381111;
+  background-color: #411226;
 }
 .answer:hover{
-    background-color: #140808;
+    background-color: #832e6a;
 }
 .butt:hover {
-background-color: #250d0d;
+background-color: #832e59;
 }
 .answers img {
     width: 100%;
@@ -202,15 +200,15 @@ background-color: #250d0d;
   width: 100%;
   font-size: 24px;
   text-align: center;
-  background-color: #571818;
+  background-color: #571832;
   border-radius: 2px;
   line-height: 1.4em;
 }
 .sentenceFlashcards:nth-child(3n+3){
-  background-color: #250d0d;
+  background-color: #250d17;
 }
 .sentenceFlashcards:nth-child(3n+2){
-  background-color: #3a1313;
+  background-color: #3a132b;
 }
 .wordFlashcards{
   display: flex;
@@ -222,28 +220,34 @@ background-color: #250d0d;
   width: 100%;
   font-size: 24px;
   text-align: center;
-  background-color: #421616;
+  background-color: #421623;
   line-height: 1.4em;
 }
 .wordFlashcards:nth-child(3n+2){
-  background-color: #250d0d;
+  background-color: #0f0406;
 }
 .wordFlashcards:nth-child(3n+3){
-  background-color: #571818;
+  background-color: #571832;
 }
 .alphaFlashcards{
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-    padding: .5em;
-    margin: .24em;
-    padding-top: 1em;
-    width: 155px;
-    font-size: 24px;
-    text-align: center;
-    background-color: #2e1010;
-    line-height: 1.4em;
-  }
+  padding: .5em;
+  margin: .24em;
+  padding-top: 1em;
+  width: 155px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #2e101b;
+  line-height: 1.4em;
+}
+.alphaFlashcards:nth-child(3n+2){
+  background-color: #3d142c;
+}
+.alphaFlashcards:nth-child(3n+3){
+  background-color: #57183f;
+}
 .flashBox {
     margin-top: .5em;
     margin: auto;
@@ -252,8 +256,8 @@ background-color: #250d0d;
     flex-wrap: wrap;
 }
 .butt {
-    background-color: #341111;
-    color: #d5ffea;
+    background-color: #362127;
+    color: #ffffff;
     padding: 16px;
     font-size: 15px;
     border: none;
@@ -344,7 +348,7 @@ background-color: #250d0d;
     position: absolute;
     left: 0;
     top: 68px;
-    background: #341111;
+    background: #571832;
   }
   .toggle {
     display: none;
@@ -356,7 +360,7 @@ background-color: #250d0d;
     width: 600px;
     height: 600px;
     border: none;
-    border-left: 1px solid #7b5353;
+    border-left: 1px solid #8a4465;
 }
 
 #quiz-practice {
